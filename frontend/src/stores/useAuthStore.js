@@ -84,7 +84,7 @@ export const useAuthStore = create((set, get) => ({
     const { authUser } = get();
     if (!authUser || get().socket?.connected) return;
 
-    const socket = io("http://localhost:5000", {
+    const socket = io("https://z-socialmedia.up.railway.app:5000", {
       query: {
         userId: authUser._id,
       },
